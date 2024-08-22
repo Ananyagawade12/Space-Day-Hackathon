@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://wallup.net/wp-content/uploads/2018/10/04/119777-night-the-starry-sky-mountains-space-planet-satellite-terrain-nebula.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.35); 
+    background-blend-mode: overlay;
+    color: #ffffff; /* White text */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 0.5em;
+    color:burlywood;
+}
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color:beige
+}
+.centered-text {
+    font-size: 1.3em;
+    max-width: 600px; /* Set the maximum width of the text container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the text for extra space */
+    text-align: center; /* Center the text within the container */
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+
+button:hover {
+    background-color: #ff4a33; /* Change color on hover */
+}

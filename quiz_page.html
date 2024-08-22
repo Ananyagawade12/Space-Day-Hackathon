@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Day Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://cdn.wallpapersafari.com/69/32/P49cKz.jpg");
+            background-color: rgba(0, 0, 0, 0.35); 
+            background-blend-mode: overlay;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff5b50;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Space Day Quiz</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. Which rocket was used to launch India’s Mars Orbiter Mission (Mangalyaan)?</p>
+            <label><input type="radio" name="q1" value="PSLV"> PSLV</label>
+            <label><input type="radio" name="q1" value="RSLV"> RSLV</label>
+            <label><input type="radio" name="q1" value="GSLV"> GSLV</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which Indian space mission was aimed at studying the structure of the Universe?</p>
+            <label><input type="radio" name="q2" value="GSAT"> GSAT</label>
+            <label><input type="radio" name="q2" value="Cartosat"> Cartosat</label>
+            <label><input type="radio" name="q2" value="Astrosat"> Astrosat</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Which Indian satellite is dedicated to educational purposes?</p>
+            <label><input type="radio" name="q3" value="Cartosat"> Cartosat</label>
+            <label><input type="radio" name="q3" value="EduSat"> EduSat</label>
+            <label><input type="radio" name="q3" value="GSAT-10"> GSAT-10</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Who was the founder of ISRO? </p>
+            <label><input type="radio" name="q4" value="Dr. Vikram Sarabha"> Dr. Vikram Sarabha</label>
+            <label><input type="radio" name="q4" value="Dr. A.P.J Abdul Kalam"> Dr. A.P.J Abdul Kalam</label>
+            <label><input type="radio" name="q4" value="Dr. C.V. Raman"> Dr. C.V. Raman</label>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. When did India’s first astronaut, Rakesh Sharma, fly to space? </p>
+            <label><input type="radio" name="q5" value="1969"> 1969 </label>
+            <label><input type="radio" name="q5" value="1990"> 1990</label>
+            <label><input type="radio" name="q5" value="1984"> 1984</label>
+        </div>
+
+        <button onclick="calculateScore()">Submit</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            // Answers
+            var answers = {
+                q1: "PSLV",
+                q2: "Astrosat",
+                q3: "EduSat",
+                q4: "Dr. Vikram Sarabha",
+                q5: "1984"
+            };
+
+            var score = 0;
+
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            var q2 = document.querySelector('input[name="q2"]:checked');
+            var q3 = document.querySelector('input[name="q3"]:checked');
+            var q4 = document.querySelector('input[name="q4"]:checked');
+            var q5 = document.querySelector('input[name="q5"]:checked');
+
+            if (q1 && q1.value === answers.q1) score++;
+            if (q2 && q2.value === answers.q2) score++;
+            if (q3 && q3.value === answers.q3) score++;
+            if (q4 && q4.value === answers.q4) score++;
+            if (q5 && q5.value === answers.q5) score++;
+            
+            document.getElementById("result").innerText = "Your score is: " + score + "/5";
+        }
+    </script>
+<a href="Space_Day.html" style = "color : black; font-family: 'Arial', sans-serif; text-decoration: none; font-size: 20px;">Go back to the First Page</a>
+</body>
+</html>
